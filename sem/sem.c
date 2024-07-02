@@ -42,7 +42,7 @@ static bool __semOp (struct sem* sem,int* op_vals) {
     int op_nums = 0;
 
     for (int i=0;i<sem->nums;i++) {
-        if (op_vals[i]>=0) {
+        if (op_vals[i]>0) {
             ops[op_nums].sem_flg = SEM_UNDO;
             ops[op_nums].sem_op=op_vals[i];
             ops[op_nums++].sem_num=i;
