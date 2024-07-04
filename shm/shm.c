@@ -1,7 +1,7 @@
 #include "shm.h"
 
 struct shm* shmInit(char* pathname,int proj_id,size_t size) {
-    int key = ftok(pathname,proj_id);
+    key_t key = ftok(pathname,proj_id);
     if (key<0) {
         DEBUG_INFO;
         perror("");
